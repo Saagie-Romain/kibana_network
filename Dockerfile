@@ -1,5 +1,3 @@
-# Copyright (c) Jupyter Development Team.
-# Distributed under the terms of the Modified BSD License.
 FROM kibana:6.5.4
 USER root
 ENV PATH /usr/share/kibana/bin:$PATH
