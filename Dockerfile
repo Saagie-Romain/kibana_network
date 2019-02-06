@@ -1,4 +1,4 @@
-FROM kibana:6.5.4
+FROM kibana:5.6.3
 USER root
 ENV PATH /usr/share/kibana/bin:$PATH
 
