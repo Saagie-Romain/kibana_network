@@ -6,7 +6,7 @@ RUN apt-get update &&  apt-get install -y git
 
 RUN apt-get install -y nodejs npm
 RUN cd /usr/share/kibana/plugins && \
-	git clone https://github.com/dlumbrer/kbn_network.git network_vis -b 6-dev && \
+	git clone https://github.com/dlumbrer/kbn_network.git network_vis -b 5.4.x && \
 	cd network_vis && \
 	rm -rf images/ && \
 	npm install
