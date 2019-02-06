@@ -2,11 +2,9 @@ FROM kibana:5.6.3
 USER root
 ENV PATH /usr/share/kibana/bin:$PATH
 
-RUN yum install -y git
+RUN apt-get update &&  apt-get install -y git
 
-RUN yum install -y gcc-c++ make
-RUN curl -sL https://rpm.nodesource.com/setup_6.x | bash -
-RUN yum install -y nodejs
+RUN apt-get install -y nodejs npm
 RUN cd /usr/share/kibana/ && \
 	git clone https://github.com/dlumbrer/kbn_network.git network_vis -b 6-dev && \
 	cd network_vis && \
